@@ -16,7 +16,7 @@ class Users_model extends CI_Model {
     public function get_last_ten_entries()
     {
         $query = $this->db->get('users', 10);
-        return $query->result();
+        return $query->result_array();
     }
 
     public function user_add()
