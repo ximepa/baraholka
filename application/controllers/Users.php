@@ -10,9 +10,12 @@ class Users extends CI_Controller {
         $this->load->view('users_view', $data);
     }
 
-    public function comments()
+    public function user_add()
     {
-        echo 'Look at this!';
+        $this->load->model('users_model');
+        $this->users_model->get_last_ten_entries();
+        $data['query'] = $this->users_model->user_add();
+        $this->load->view('users_view', $data);
     }
 }
 
