@@ -7,20 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
-          <root url="file://C:/php" />
+          <root url="file:///usr/share/php" />
         </CLASSES>
         <SOURCES>
-          <root url="file://C:/php" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://C:/php/pharcommand.phar" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar://C:/php/pharcommand.phar" />
+          <root url="file:///usr/share/php" />
         </SOURCES>
       </library>
     </orderEntry>
