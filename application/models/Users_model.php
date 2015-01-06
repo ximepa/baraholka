@@ -25,7 +25,7 @@ class Users_model extends CI_Model {
         $this->fio = $_POST['fio'];
         $this->status = $_POST['status'];
 
-        $this->db->insert('userss', $this);
+        $this->db->insert('users', $this);
     }
 
     public function update_entry()
