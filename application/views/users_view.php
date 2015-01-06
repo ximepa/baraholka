@@ -86,7 +86,7 @@
                         <tbody>
                             <?php foreach ($query as $item):?>
                                 <tr>
-                                    <td><a href="#"><?php echo $item['id'];?></a></td>
+                                    <td><a href="/users/update/<?php echo $item['id']; ?>"><?php echo $item['id'];?></a></td>
                                     <td><?php echo $item['login'];?></td>
                                     <td><?php echo $item['fio'];?></td>
                                     <td><?php echo $item['status'];?></td>
@@ -94,6 +94,7 @@
                             <?php endforeach;?>
                         </tbody>
                     </table>
+                    <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
                 </div>
             </div>
         </div>

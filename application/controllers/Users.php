@@ -9,12 +9,12 @@ class Users extends CI_Controller {
         $this->load->view('users_view', $data);
     }
 
-    public function user_add()
+    public function update($id)
     {
         $this->load->model('users_model');
         $this->load->helper('form');
-        $data['query'] = $this->users_model->user_add();
-        $this->load->view('user_add_view', $data);
+        $data['query'] = $this->users_model->user_get($id);
+        $this->load->view('user_update_view', $data);
     }
 }
 

@@ -13,6 +13,13 @@ class Users_model extends CI_Model {
         parent::__construct();
     }
 
+    public function user_get($id)
+    {
+        $query = $this->db->get_where('users', array('id' => $id), 1);
+        #echo $query['id'];
+        return $query->result_array();
+    }
+
     public function get_last_ten_entries()
     {
         $query = $this->db->get('users', 10);
@@ -28,7 +35,7 @@ class Users_model extends CI_Model {
         $this->db->insert('users', $this);
     }
 
-    public function update_entry()
+    public function user_update()
     {
         $this->login = $_POST['login'];
         $this->fio  = $_POST['fio'];
