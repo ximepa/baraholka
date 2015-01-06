@@ -4,7 +4,7 @@ class Users_Controller extends CI_Controller {
 
     public function index()
     {
-        echo 'Hello World!';
+        echo 'Hello Worldssdd!';
     }
 
     public function comments()
