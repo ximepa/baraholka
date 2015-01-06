@@ -1,6 +1,6 @@
 <?php
 
-class Users_Controller extends CI_Controller {
+class Users extends CI_Controller {
 
     public function index()
     {
