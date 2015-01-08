@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:8080/';
+$config['base_url'] = 'http://172.16.1.113:8080/';
 
 /*
 |--------------------------------------------------------------------------

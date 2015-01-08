@@ -87,7 +87,7 @@
                         <tbody>
                             <?php foreach ($users as $item):?>
                                 <tr>
-                                    <td><a href="<?php echo $item['id']; ?>"><?php echo $item['id'];?></a></td>
+                                    <td><a href="/users/<?php echo $item['id']; ?>"><?php echo $item['id'];?></a></td>
                                     <td><?php echo $item['login'];?></td>
                                     <td><?php echo $item['fio'];?></td>
                                     <td><?php echo $item['status'];?></td>

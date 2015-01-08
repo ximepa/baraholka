@@ -86,9 +86,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['users/add'] = 'users/add';
-$route['users/(:any)'] = 'users/view/$1';
+$route['users/(:num)'] = 'users/view/$1';
 $route['users'] = 'users';
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'users';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 /* End of file routes.php */
