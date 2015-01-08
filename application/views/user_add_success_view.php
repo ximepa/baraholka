@@ -74,10 +74,7 @@
         </div>
         <div class="col-md-10">
             <h2>Table</h2>
-            <?php echo $query['id'] ?>
-            <?php echo $query['login'] ?>
-            <?php echo form_open('email/send'); ?>
-            <?php echo form_close();?>
+            success
         </div>
     </div>
 </div>

@@ -13,11 +13,16 @@ class Users_model extends CI_Model {
         parent::__construct();
     }
 
-    public function user_get($id)
+    public function users_get($id = FALSE)
     {
-        $query = $this->db->get_where('users', array('id' => $id), 1);
-        #echo $query['id'];
-        return $query->result_array();
+        if ($id === FALSE)
+        {
+            $query = $this->db->get('users');
+            return $query->result_array();
+        }
+
+        $query = $this->db->get_where('users', array('id' => $id));
+        return $query->row_array();
     }
 
     public function get_last_ten_entries()
@@ -28,11 +33,19 @@ class Users_model extends CI_Model {
 
     public function user_add()
     {
-        $this->login = $_POST['login']; // please read the below note
-        $this->fio = $_POST['fio'];
-        $this->status = $_POST['status'];
-
-        $this->db->insert('users', $this);
+        echo $this->input->post;
+        $data = array(
+            'login' => $this->input->post('login'),
+            'fio' => $this->input->post('fio'),
+            'status' => $this->input->post('status')
+        );
+        print_r($data);
+        return $this->db->insert('users', $data);
+//        $this->login = $_POST['login']; // please read the below note
+//        $this->fio = $_POST['fio'];
+//        $this->status = $_POST['status'];
+//
+//        $this->db->insert('users', $this);
     }
 
     public function user_update()

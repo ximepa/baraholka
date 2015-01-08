@@ -74,26 +74,24 @@
         </div>
         <div class="col-md-10">
             <h2>Table</h2>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>id</th>
-                    <th>login</th>
-                    <th>fio</th>
-                    <th>status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($query as $item):?>
-                    <tr>
-                        <td><a href="#"><?php echo $item['id'];?></a></td>
-                        <td><?php echo $item['login'];?></td>
-                        <td><?php echo $item['fio'];?></td>
-                        <td><?php echo $item['status'];?></td>
-                    </tr>
-                <?php endforeach;?>
-                </tbody>
-            </table>
+            <?php echo validation_errors(); ?>
+
+            <?php echo form_open('users/add'); ?>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="text" class="form-control" id="login" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="text" class="form-control" id="fio" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="status"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
         </div>
     </div>
 </div>

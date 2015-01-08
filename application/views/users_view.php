@@ -84,9 +84,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($query as $item):?>
+                            <?php foreach ($users as $item):?>
                                 <tr>
-                                    <td><a href="/users/update/<?php echo $item['id']; ?>"><?php echo $item['id'];?></a></td>
+                                    <td><a href="<?php echo $item['id']; ?>"><?php echo $item['id'];?></a></td>
                                     <td><?php echo $item['login'];?></td>
                                     <td><?php echo $item['fio'];?></td>
                                     <td><?php echo $item['status'];?></td>
