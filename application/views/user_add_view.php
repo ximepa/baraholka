@@ -75,7 +75,7 @@
         </div>
         <div class="col-md-10">
             <h2>Table</h2>
-            <?php echo validation_errors(); ?>
+            <?php echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>'); ?>
 
             <?php echo form_open('users/add'); ?>
                 <div class="form-group">
