@@ -33,7 +33,8 @@ class Users_model extends CI_Model {
 
     public function user_add()
     {
-        echo $this->input->post;
+        print_r($this->input->post());
+        echo '<br/>';
         $data = array(
             'login' => $this->input->post('login'),
             'fio' => $this->input->post('fio'),
